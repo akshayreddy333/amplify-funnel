@@ -18,15 +18,9 @@ function App() {
         >
           Learn React Here
         </a>
-      </header>
-      <div id="funnel"></div>
-      <script
-        id="indeed-partnership-funnel-script"
-        type="text/javascript"
-        src="https://partnerships.indeed.com/static/scout-file/scout.js"
-        data-indeed-container-id="funnel"
-        data-indeed-partner-name="Grubhub">
-      </script>
+        <div id="your-container-id" />
+      </header>      
+      <script id="indeed-partnership-funnel-script" type="text/javascript" src="https://partnerships.indeed.com/static/scout-file/scout.js" data-indeed-container-id="your-container-id" data-indeed-partner-name="Grubhub"></script>
     </div>
   );
 }
