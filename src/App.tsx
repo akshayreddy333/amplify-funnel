@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React Here
         </a>
       </header>
       <div id="funnel"></div>
@@ -24,7 +24,7 @@ function App() {
         id="indeed-partnership-funnel-script"
         type="text/javascript"
         src="https://partnerships.indeed.com/static/scout-file/scout.js"
-        data-indeed-container-id="your-container-id"
+        data-indeed-container-id="funnel"
         data-indeed-partner-name="Grubhub">
       </script>
     </div>
