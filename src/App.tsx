@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import { Helmet } from "react-helmet"
+import QaTest from "./QA-test"
+import ProdTest from './Prod-test';
 
 function App() {
+
+  const [isQA, setIsQA] = useState<boolean>(true);
+
+  function handleClick() {
+    setIsQA(!isQA);
+  }
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React Here
-        </a>
-        <div id="your-container-id" />
-      </header>      
-      <script id="indeed-partnership-funnel-script" type="text/javascript" src="https://partnerships.indeed.com/static/scout-file/scout.js" data-indeed-container-id="your-container-id" data-indeed-partner-name="Grubhub"></script>
+        <button onClick={handleClick}>Switch Env</button>
+        {isQA ?
+          <QaTest />
+          :
+          <ProdTest />
+        }
+      </header>
     </div>
   );
 }
